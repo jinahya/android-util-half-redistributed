@@ -111,7 +111,7 @@
           <artifactId>maven-javadoc-plugin</artifactId>
           <version>${version.maven-javadoc-plugin}</version>
           <configuration>
-            <!--            <doclint>all</doclint>-->
+            <doclint>none</doclint>
           </configuration>
         </plugin>
         <plugin>

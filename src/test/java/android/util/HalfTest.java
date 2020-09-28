@@ -6,8 +6,11 @@ import org.junit.jupiter.api.Test;
 import static java.util.concurrent.ThreadLocalRandom.current;
 import static org.assertj.core.api.Assertions.assertThat;
 
+/**
+ * Tests {@link Half} class.
+ */
 @Slf4j
-class HalfTest {
+public class HalfTest {
 
     @Test
     void testToFloat() {
@@ -140,7 +143,7 @@ class HalfTest {
     }
 
     @Test
-    void testNan() {
+    void testNaN() {
         final int sign = current().nextInt(2);
         final int exponent = 0b11111;
         final int fraction = current().nextInt(1, 0b1_0000000000);
@@ -148,5 +151,6 @@ class HalfTest {
         final float f = Half.toFloat(expected);
         assertThat(f).isNaN();
         final short actual = Half.toHalf(f);
+        log.debug("actual NaN: {}", actual);
     }
 }
