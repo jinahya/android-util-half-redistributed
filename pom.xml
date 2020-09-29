@@ -8,7 +8,7 @@
     <version>0.8.5</version>
   </parent>
 
-  <artifactId>bit-io</artifactId>
+  <artifactId>android-util-half-redistributed</artifactId>
   <version>0.0.3-SNAPSHOT</version>
   <packaging>jar</packaging>
 
